@@ -22,7 +22,7 @@ def predict():
 
     output = predicted_value[list(prediction)[0]]
 
-    return render_template('index.html', prediction_text='Gender is $ {}'.format(output))
+    return render_template('index.html', prediction_text='Gender is {}'.format(output))
 
 
 if __name__ == "__main__":
