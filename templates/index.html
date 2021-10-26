@@ -3,7 +3,7 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
+  <title>Gender Prediction based on Tooth Measurement</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -14,20 +14,23 @@
 <body>
  <div class="login">
 	<h1>Gender Prediction based on Tooth Measurement</h1>
+	<p>Submitter - Vamsi Krishna Nilla </p>
+	<p>Used Random Forests Algorithm with Mean Validation (ROC_AUC_SCORE) 0.932 </p>
+	<p>Used Heroku and Github for Deployment</p>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="age" placeholder="Age" required="required" />
-        <input type="text" name="inter canine distance intraoral" placeholder="Inter canine distance intraoral" required="required" />
-	<input type="text" name="intercanine distance casts" placeholder="Intercanine distance casts" required="required" />
-	<input type="text" name="right canine width intraoral" placeholder="Right canine width intraoral" required="required" />
-	<input type="text" name="right canine width casts" placeholder="Right canine width casts" required="required" />
-	<input type="text" name="left canine width intraoral" placeholder="Left canine width intraoral" required="required" />
-	<input type="text" name="left canine width casts" placeholder="Left canine width casts" required="required" />
-	<input type="text" name="right canine index intra oral" placeholder="Right canine index intra oral" required="required" />
-	<input type="text" name="right canine index casts" placeholder="Right canine index casts" required="required" />
-	<input type="text" name="left canine index intra oral" placeholder="Left canine index intra oral" required="required" />
-	<input type="text" name="left canine index casts" placeholder="Left canine index casts" required="required" />
+    	<input type="text" name="age" placeholder="Age" required="required" /><br>
+        <input type="text" name="inter canine distance intraoral" placeholder="Inter canine distance intraoral" required="required" /><br>
+	<input type="text" name="intercanine distance casts" placeholder="Intercanine distance casts" required="required" /><br>
+	<input type="text" name="right canine width intraoral" placeholder="Right canine width intraoral" required="required" /><br>
+	<input type="text" name="right canine width casts" placeholder="Right canine width casts" required="required" /><br>
+	<input type="text" name="left canine width intraoral" placeholder="Left canine width intraoral" required="required" /><br>
+	<input type="text" name="left canine width casts" placeholder="Left canine width casts" required="required" /><br>
+	<input type="text" name="right canine index intra oral" placeholder="Right canine index intra oral" required="required" /><br>
+	<input type="text" name="right canine index casts" placeholder="Right canine index casts" required="required" /><br>
+	<input type="text" name="left canine index intra oral" placeholder="Left canine index intra oral" required="required" /><br>
+	<input type="text" name="left canine index casts" placeholder="Left canine index casts" required="required" /><br>
 
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
