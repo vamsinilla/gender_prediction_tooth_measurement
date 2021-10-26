@@ -20,7 +20,7 @@ def predict():
     
     predicted_value = {1:'Male',0:'Female'}
 
-    output = predicted_value[prediction]
+    output = predicted_value[list(prediction)[0]]
 
     return render_template('index.html', prediction_text='Gender is $ {}'.format(output))
 
